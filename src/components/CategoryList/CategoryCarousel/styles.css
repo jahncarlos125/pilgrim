@@ -1,0 +1,11 @@
+.slick-next {
+  right: 25px !important;
+}
+
+.slick-prev {
+  left: 25px !important;
+}
+
+.slick-next:before, .slick-prev:before {
+  color: #F29943;
+}
