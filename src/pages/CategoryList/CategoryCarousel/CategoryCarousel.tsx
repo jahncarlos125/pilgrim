@@ -1,8 +1,8 @@
 import { Product } from '../interfaces';
 import Slider, { Settings } from 'react-slick';
-import './styles.css';
-import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css"; 
+import './styles.css';
 
 const settings: Settings = {
   slidesToShow: 4,
