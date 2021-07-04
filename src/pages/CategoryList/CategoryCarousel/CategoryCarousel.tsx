@@ -1,5 +1,6 @@
 import { Product } from '../interfaces';
 import Slider, { Settings } from 'react-slick';
+import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css"; 
 import './styles.css';
@@ -8,6 +9,7 @@ const settings: Settings = {
   slidesToShow: 4,
   slidesToScroll: 1,
   arrows: true,
+  lazyLoad: 'ondemand',
   responsive: [
     {
       breakpoint: 1024,
@@ -42,7 +44,9 @@ export default function CategoryCarousel(props: {product: Product[]}) {
   return (
     <Slider {...settings}>
       {product.map((item) => (
-        <img key={item.id} className='object-contain max-h-96' src={item.cover_path} alt={item.title} />
+        <Link to='product'>
+          <img key={item.id} className='object-contain max-h-96' src={item.cover_path} alt={item.title} />
+        </Link>
       ))}
     </Slider>
   )
