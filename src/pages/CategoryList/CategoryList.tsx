@@ -2,8 +2,13 @@ import { useEffect, useState } from 'react'
 import axios from 'axios';
 import { Categories } from './interfaces';
 import CategoryCarousel from './CategoryCarousel';
+import { Product } from '../../shared/interfaces';
 
-export default function CategoryList() {
+interface CategoryListProps {
+  setSelectedProduct: React.Dispatch<React.SetStateAction<Product>>
+}
+
+export default function CategoryList(props: CategoryListProps) {
   const [ products, setProducts ] = useState<Categories[]>([]);
 
   useEffect(() => {
@@ -22,7 +27,7 @@ export default function CategoryList() {
         return (
           <div key={item.id} className={style}>
             <p className='text-2xl font-sans text-pilgrim font-bold m-2'>{item.title}</p>
-            <CategoryCarousel product={item.products}/>
+            <CategoryCarousel setSelectedProduct={props.setSelectedProduct} product={item.products}/>
           </div>
         )
       })}

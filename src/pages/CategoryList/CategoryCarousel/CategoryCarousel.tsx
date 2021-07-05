@@ -1,9 +1,9 @@
-import { Product } from '../interfaces';
 import Slider, { Settings } from 'react-slick';
-import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css"; 
 import './styles.css';
+import { Product } from '../../../shared/interfaces';
+import { useRedirect } from '../../../hooks';
 
 const settings: Settings = {
   slidesToShow: 4,
@@ -36,17 +36,27 @@ const settings: Settings = {
   ]
 };
 
-export default function CategoryCarousel(props: {product: Product[]}) {
+interface CategoryCarouselProps{
+  setSelectedProduct: React.Dispatch<React.SetStateAction<Product>>,
+  product: Product[],
+}
+
+export default function CategoryCarousel(props: CategoryCarouselProps) {
+  const redirect = useRedirect();
   const {
-    product
+    product,
+    setSelectedProduct
   } = props;
+
+  function goToProduct(item: Product){
+    setSelectedProduct(item);
+    redirect(`product/${item.id}`);
+  }
 
   return (
     <Slider {...settings}>
       {product.map((item) => (
-        <Link to='product'>
-          <img key={item.id} className='object-contain max-h-96' src={item.cover_path} alt={item.title} />
-        </Link>
+        <img key={item.id} onClick={() => goToProduct(item)} className='object-contain max-h-96' src={item.cover_path} alt={item.title} />
       ))}
     </Slider>
   )
