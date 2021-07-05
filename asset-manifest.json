@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/pilgrim/static/css/main.d12df284.chunk.css",
+    "main.js": "/pilgrim/static/js/main.dca23ee6.chunk.js",
+    "main.js.map": "/pilgrim/static/js/main.dca23ee6.chunk.js.map",
+    "runtime-main.js": "/pilgrim/static/js/runtime-main.79c9701f.js",
+    "runtime-main.js.map": "/pilgrim/static/js/runtime-main.79c9701f.js.map",
+    "static/css/2.9958f0d4.chunk.css": "/pilgrim/static/css/2.9958f0d4.chunk.css",
+    "static/js/2.5d32b125.chunk.js": "/pilgrim/static/js/2.5d32b125.chunk.js",
+    "static/js/2.5d32b125.chunk.js.map": "/pilgrim/static/js/2.5d32b125.chunk.js.map",
+    "index.html": "/pilgrim/index.html",
+    "static/css/2.9958f0d4.chunk.css.map": "/pilgrim/static/css/2.9958f0d4.chunk.css.map",
+    "static/css/main.d12df284.chunk.css.map": "/pilgrim/static/css/main.d12df284.chunk.css.map",
+    "static/js/2.5d32b125.chunk.js.LICENSE.txt": "/pilgrim/static/js/2.5d32b125.chunk.js.LICENSE.txt",
+    "static/media/logo.381ed32c.png": "/pilgrim/static/media/logo.381ed32c.png",
+    "static/media/slick-theme.css": "/pilgrim/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.79c9701f.js",
+    "static/css/2.9958f0d4.chunk.css",
+    "static/js/2.5d32b125.chunk.js",
+    "static/css/main.d12df284.chunk.css",
+    "static/js/main.dca23ee6.chunk.js"
+  ]
+}
