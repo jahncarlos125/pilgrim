@@ -9,9 +9,9 @@ export default function Header() {
   return (
     <div className='flex flex-row justify-between h-12 px-4 py-2 bg-pilgrim'>
       <img src={Logo} alt='logo' className='h-10 w-auto'/>
-      {location.pathname !== '/' && (
+      {location.pathname !== '/pilgrim' && (
         <button className='text-white border-2 p-1 rounded-md self-center'
-          onClick={() => redirect('/')}
+          onClick={() => redirect('/pilgrim')}
         >
           Voltar
         </button>

@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route 
-          path='/'
+          path='/pilgrim'
           render={() => (
             <CategoryList setSelectedProduct={setSelectedProduct}/>
           )}
