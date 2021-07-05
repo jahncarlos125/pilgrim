@@ -50,7 +50,7 @@ export default function CategoryCarousel(props: CategoryCarouselProps) {
 
   function goToProduct(item: Product){
     setSelectedProduct(item);
-    redirect(`product/${item.id}`);
+    redirect(`/pilgrim/product/${item.id}`);
   }
 
   return (

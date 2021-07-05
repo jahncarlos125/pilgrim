@@ -26,7 +26,7 @@ function App() {
           exact
         />
         <Route 
-          path='/product/:id'
+          path='/pilgrim/product/:id'
           render={() => (
             <ProductDetails selectedProduct={selectedProduct}/>
           )}
